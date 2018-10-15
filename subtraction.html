@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Arithmetic Operation</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+  function compute_x_minus_y(x,y) {
+    var z = 0;
+    x = parseInt(x);
+    y = parseInt(y);
+    z = x - y;
+    return z;
+  }
+  function ask_for_x_n_y() { 
+    var x = prompt("Enter x value");
+    var y = prompt("Enter y value");
+    var z = compute_x_minus_y(x,y);
+    var x = document.getElementById("demo"); 
+    x.style.fontSize = "25px"; 
+    x.style.color = "red"; 
+    document.getElementById("demo").innerHTML = "The answer is " + z; 
+  }
+  function show_topic() { 
+    var x = document.getElementById("welcome"); 
+    x.style.fontSize = "25px"; 
+    x.style.color = "red"; 
+  } 
+  </script> 
+</head>
+
+<body>
+<div class="container">
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="addition.html">ADDITION</a>
+  <li><a href="subtraction.html">SUBTRACTION</a>
+</ul>
+
+<!-- Main content -->
+<h1>Arithmetic Operation</h1>
+
+<p id="welcome">Welcome to this page!
+
+<p id="demo">
+
+<p>The division of two natural numbers is the process of calculating the number of times one number is contained within another one.
+
+<!-- Sign and date the page, it's only polite! -->
+<br>
+<button type="button" class="btn btn-primary" onclick="ask_for_x_n_y();">X - Y = ?</button>
+<button onclick="show_topic();">Change Text Color of Welcome Message</button>
+
+<address>Made 10 October 2018<br>
+  by myself.</address>
+</div>
+</body>
+</html>
